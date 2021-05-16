@@ -21,9 +21,9 @@ echo "Computation values are : " ${expression[@]}
 
 #sorting array into descending order..
 length=${#expression[@]}
-for(( outer_count=0; outer_count<n; ++outer_count ))
+for(( outer_count=0; outer_count<$length; ++outer_count ))
 do
-	for (( inner_count=$outer_count+1; inner_count<n; ++inner_count ))
+	for (( inner_count=$outer_count+1; inner_count<$length; ++inner_count ))
 	do
 		if [ ${expression[outer_count]} -lt ${expression[inner_count]} ]
 		then
