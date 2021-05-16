@@ -17,3 +17,4 @@ declare -A expression
 expression=(["exp1"]=$expression1 ["exp2"]=$expression2 ["exp3"]=$expression3 ["exp4"]=$expression4)
 
 
+echo "Computation values are : " ${expression[@]}
