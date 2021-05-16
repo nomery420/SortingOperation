@@ -14,16 +14,16 @@ expression4=$(( a%b+c ))
 
 
 declare -A expression
-expression=(["exp1"]=$expression1 ["exp2"]=$expression2 ["exp3"]=$expression3 ["exp3"]=$expression3)
+expression=(["exp1"]=$expression1 ["exp2"]=$expression2 ["exp3"]=$expression3 ["exp4"]=$expression4)
 
 
 echo "Computation values are : " ${expression[@]}
 
 #sorting array into descending order..
 length=${#expression[@]}
-for(( outer_count=0; outer_count<n; ++outer_count ))
+for(( outer_count=0; outer_count<$length; ++outer_count ))
 do
-	for (( inner_count=$outer_count+1; inner_count<n; ++inner_count ))
+	for (( inner_count=$outer_count+1; inner_count<$length; ++inner_count ))
 	do
 		if [ ${expression[outer_count]} -lt ${expression[inner_count]} ]
 		then
