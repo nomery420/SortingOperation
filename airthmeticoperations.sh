@@ -8,3 +8,4 @@ expression1=$(( a+b*c ))
 
 expression2=$(( a*b+c ))
 
+expression3=$(( c+a/b ))
